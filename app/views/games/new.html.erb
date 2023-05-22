@@ -1,0 +1,9 @@
+<% @letters.each do |element| %>
+<%= element  %>
+<% end %>
+
+<form action="score" method="post" data-turbo="false">
+  <input type="text" name="word" id="word" placeholder="Who are you looking for?">
+  <input type="submit">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
